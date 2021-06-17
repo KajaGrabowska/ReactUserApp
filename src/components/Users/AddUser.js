@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
 import Card from "../UI/Card";
+import Wrapper from '../Helpers/Wrapper';
 import styles from "./AddUser.module.css"; // you need to add the extension for non-javascript files
 
 const AddUser = (props) => {
@@ -44,7 +45,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -71,7 +72,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
